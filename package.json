@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "A simple Express.js application with TypeScript and Airtable",
   "main": "src/server.ts",
+  "type": "module",
   "engines": {
     "node": "latest",
     "npm": "latest",
