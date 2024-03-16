@@ -17,11 +17,19 @@ const router = express.Router();
 //   res.send('Hello, World!');
 // });
 
+
 // GET /people
 router.get('/', async (req: Request, res: Response) => {
 
   const people = await table.select().firstPage();
   res.json(people);
+});
+
+// Test to see how to manage the route
+router.post('/test', async (req: Request, res: Response) => {
+  const body = req.body
+  console.log('xx ===>', { body })
+  res.json({ body });
 });
 
 // POST /people

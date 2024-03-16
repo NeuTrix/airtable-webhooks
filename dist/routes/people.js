@@ -29,6 +29,12 @@ router.get('/', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const people = yield table.select().firstPage();
     res.json(people);
 }));
+// Test to see how to manage the route
+router.post('/test', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const body = req.body;
+    console.log('xx ===>', { body });
+    res.json({ body });
+}));
 // POST /people
 router.post('/', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const people = yield table.create(req.body);
