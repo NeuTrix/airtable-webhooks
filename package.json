@@ -12,7 +12,8 @@
     "build": "tsc",
     "dev": "nodemon src/server.ts",
     "lint": "eslint 'src/**/*.{js,ts}'",
-    "start": "yarn dev node src/server.ts",
+    "heroku-postbuild": "tsc && nodemon src/server.js",
+    "start": "node src/server.ts",
     "test": "jest"
   },
   "keywords": [
