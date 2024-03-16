@@ -1,5 +1,5 @@
-import dotenv from 'dotenv';
-dotenv.config();
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+require('dotenv').config();
 
 import express from 'express';
 import bodyParser from 'body-parser';
