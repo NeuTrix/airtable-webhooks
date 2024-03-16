@@ -957,7 +957,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/body-parser@npm:*":
+"@types/body-parser@npm:*, @types/body-parser@npm:^1.19.5":
   version: 1.19.5
   resolution: "@types/body-parser@npm:1.19.5"
   dependencies:
@@ -1402,6 +1402,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "airtable-webhooks@workspace:."
   dependencies:
+    "@types/body-parser": "npm:^1.19.5"
     "@types/chai": "npm:^4.3.12"
     "@types/eslint": "npm:^8"
     "@types/express": "npm:^4.17.21"
