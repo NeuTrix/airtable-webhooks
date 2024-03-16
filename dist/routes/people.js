@@ -30,16 +30,16 @@ router.get('/', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     res.json(people);
 }));
 // Test to see how to manage the route
-router.post('/test', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+router.post('/', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const body = req.body;
     console.log('xx ===>', { body });
     res.json({ body });
 }));
-// POST /people
-router.post('/', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const people = yield table.create(req.body);
-    res.json(people);
-}));
+// // POST /people
+// router.post('/', async (req: Request, res: Response) => {
+//   const people = await table.create(req.body);
+//   res.json(people);
+// });
 // PUT /people/:id
 router.put('/:id', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const people = yield table.update(req.params.id, req.body);

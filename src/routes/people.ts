@@ -26,17 +26,17 @@ router.get('/', async (req: Request, res: Response) => {
 });
 
 // Test to see how to manage the route
-router.post('/test', async (req: Request, res: Response) => {
+router.post('/', async (req: Request, res: Response) => {
   const body = req.body
   console.log('xx ===>', { body })
   res.json({ body });
 });
 
-// POST /people
-router.post('/', async (req: Request, res: Response) => {
-  const people = await table.create(req.body);
-  res.json(people);
-});
+// // POST /people
+// router.post('/', async (req: Request, res: Response) => {
+//   const people = await table.create(req.body);
+//   res.json(people);
+// });
 
 // PUT /people/:id
 router.put('/:id', async (req: Request, res: Response) => {
