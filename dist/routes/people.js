@@ -20,6 +20,10 @@ const TABLE_NAME = process.env.AIRTABLE_KTK_TABLE_ID_PEOPLE;
 const base = new airtable_1.default({ apiKey: API_KEY }).base(BASE_ID || '');
 const table = base(TABLE_NAME || '');
 const router = express_1.default.Router();
+// Hello World
+// router.get('/', (req: Request, res: Response) => {
+//   res.send('Hello, World!');
+// });
 // GET /people
 router.get('/', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const people = yield table.select().firstPage();
