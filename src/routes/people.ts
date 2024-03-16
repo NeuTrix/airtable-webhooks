@@ -11,8 +11,15 @@ const table = base(TABLE_NAME || '');
 
 const router = express.Router();
 
+// Hello World
+
+// router.get('/', (req: Request, res: Response) => {
+//   res.send('Hello, World!');
+// });
+
 // GET /people
 router.get('/', async (req: Request, res: Response) => {
+
   const people = await table.select().firstPage();
   res.json(people);
 });
